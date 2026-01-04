@@ -1,6 +1,6 @@
 # Portfolio Website
 
-A modern, responsive portfolio website built with Next.js 15, React 19, TypeScript, and Tailwind CSS. This portfolio showcases my education, skills, projects, and volunteering experience.
+A modern, responsive portfolio website built with Next.js 15, React 19, TypeScript, and Tailwind CSS. This portfolio showcases education, skills, projects, and volunteering experience.
 
 ## Features
 
