@@ -6,9 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "pages:build": "npx @cloudflare/next-on-pages",
-    "pages:deploy": "npm run pages:build && wrangler pages deploy .vercel/output/static"
+    "lint": "next lint"
   },
   "dependencies": {
     "next": "^15.0.0",
@@ -16,7 +14,7 @@
     "react-dom": "^19.0.0",
     "resend": "^3.2.0",
     "framer-motion": "^11.0.0",
-    "lucide-react": "^0.344.0"
+    "lucide-react": "^0.446.0"
   },
   "devDependencies": {
     "@types/node": "^20.11.0",
