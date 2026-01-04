@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Calendar, Github, Linkedin } from "lucide-react";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -13,6 +14,24 @@ export default function Hero() {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="flex justify-center mb-8"
+          >
+            <div className="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-full overflow-hidden shadow-2xl ring-4 ring-blue-200 dark:ring-blue-800 ring-offset-4 ring-offset-transparent">
+              <Image
+                src="/profile.jpg"
+                alt="Mahmoud Aly"
+                fill
+                className="object-cover"
+                priority
+                sizes="(max-width: 640px) 192px, (max-width: 1024px) 224px, 256px"
+              />
+            </div>
+          </motion.div>
+          
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
