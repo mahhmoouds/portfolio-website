@@ -65,9 +65,11 @@ wrangler pages deploy .next
 2. Navigate to **Settings** > **Environment Variables**
 3. Add the following variable:
    - **Variable name:** `RESEND_API_KEY`
-   - **Value:** Your Resend API key
+   - **Value:** `re_FHuJ5PTm_2Aid3rCfJ2ak7yL3eHQeD64M`
    - **Environment:** Production (and Preview if needed)
 4. Click **Save**
+
+> **Note:** Your Resend API key is already configured. Make sure to add it as an environment variable in Cloudflare Pages before deploying.
 
 ## Step 5: Update Contact Form Email
 
