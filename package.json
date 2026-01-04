@@ -4,10 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && npm run postbuild",
-    "postbuild": "node -e \"const fs = require('fs'); const path = require('path'); const cacheDir = path.join('.next', 'cache'); if (fs.existsSync(cacheDir)) { fs.rmSync(cacheDir, { recursive: true, force: true }); console.log('Cache directory removed'); }\"",
-    "build:cf": "next build && npm run postbuild && npx @cloudflare/next-on-pages@1",
-    "pages:build": "npx @cloudflare/next-on-pages@1",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },

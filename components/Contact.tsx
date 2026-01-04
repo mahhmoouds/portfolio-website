@@ -18,12 +18,34 @@ export default function Contact() {
     setStatus("sending");
 
     try {
-      const response = await fetch("/api/contact", {
+      // Use Resend API directly from client (with API key in environment)
+      // For production, you should use a serverless function or API route
+      const response = await fetch("https://api.resend.com/emails", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "Authorization": `Bearer ${process.env.NEXT_PUBLIC_RESEND_API_KEY || 're_FHuJ5PTm_2Aid3rCfJ2ak7yL3eHQeD64M'}`,
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          from: "Portfolio Contact <onboarding@resend.dev>",
+          to: "mi2371384@gmail.com",
+          reply_to: formData.email,
+          subject: `Portfolio Contact: ${formData.subject}`,
+          html: `
+            <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+              <h2 style="color: #2563eb;">New Contact Form Submission</h2>
+              <div style="background-color: #f3f4f6; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                <p><strong>Name:</strong> ${formData.name}</p>
+                <p><strong>Email:</strong> ${formData.email}</p>
+                <p><strong>Subject:</strong> ${formData.subject}</p>
+              </div>
+              <div style="background-color: #ffffff; padding: 20px; border-radius: 8px; border: 1px solid #e5e7eb;">
+                <h3 style="color: #1f2937;">Message:</h3>
+                <p style="color: #4b5563; white-space: pre-wrap;">${formData.message}</p>
+              </div>
+            </div>
+          `,
+        }),
       });
 
       if (response.ok) {
