@@ -20,7 +20,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="flex justify-center mb-8"
           >
-            <div className="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-full overflow-hidden shadow-2xl ring-4 ring-blue-200 dark:ring-blue-800 ring-offset-4 ring-offset-transparent">
+            <div className="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-full overflow-hidden shadow-2xl ring-4 ring-blue-200 dark:ring-blue-800 ring-offset-4 ring-offset-transparent bg-gradient-to-br from-blue-400 to-indigo-600 flex items-center justify-center">
               <Image
                 src="/profile.jpg"
                 alt="Mahmoud Aly"
@@ -28,6 +28,17 @@ export default function Hero() {
                 className="object-cover"
                 priority
                 sizes="(max-width: 640px) 192px, (max-width: 1024px) 224px, 256px"
+                onError={(e) => {
+                  // Hide image on error, show initials instead
+                  e.currentTarget.style.display = 'none';
+                  const parent = e.currentTarget.parentElement;
+                  if (parent && !parent.querySelector('.initials')) {
+                    const initials = document.createElement('div');
+                    initials.className = 'initials text-white text-4xl sm:text-5xl lg:text-6xl font-bold';
+                    initials.textContent = 'MA';
+                    parent.appendChild(initials);
+                  }
+                }}
               />
             </div>
           </motion.div>
