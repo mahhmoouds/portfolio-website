@@ -53,7 +53,7 @@ export default function Contact() {
             Get In Touch
           </h2>
           <p className="text-center text-slate-600 dark:text-slate-400 mb-12">
-            I'm always open to discussing new opportunities, projects, or collaborations.
+            I&apos;m always open to discussing new opportunities, projects, or collaborations.
           </p>
 
           <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-900 dark:to-slate-800 rounded-xl shadow-lg p-8">
