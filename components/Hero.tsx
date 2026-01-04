@@ -22,7 +22,7 @@ export default function Hero() {
           >
             <div className="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-full overflow-hidden shadow-2xl ring-4 ring-blue-200 dark:ring-blue-800 ring-offset-4 ring-offset-transparent bg-gradient-to-br from-blue-400 to-indigo-600">
               <Image
-                src="/profile.jpg"
+                src="/profile.jpeg"
                 alt="Mahmoud Aly"
                 fill
                 className="object-cover"
