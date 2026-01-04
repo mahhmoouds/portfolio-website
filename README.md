@@ -63,24 +63,7 @@ pnpm dev
 
 ## Deployment
 
-### Cloudflare Pages
-
-1. Push your code to GitHub
-2. Go to Cloudflare Dashboard > Pages
-3. Connect your GitHub repository
-4. Set build settings:
-   - Build command: `npm run build`
-   - Build output directory: `.next`
-   - Node version: `18` or higher
-5. Add environment variables:
-   - `RESEND_API_KEY`: Your Resend API key
-6. Deploy!
-
-### Environment Variables
-
-Make sure to set the following environment variables in your Cloudflare Pages settings:
-
-- `RESEND_API_KEY`: Your Resend API key for contact form functionality
+This project is configured for deployment on Cloudflare Pages. Set the `RESEND_API_KEY` environment variable in your deployment platform.
 
 ## Project Structure
 
