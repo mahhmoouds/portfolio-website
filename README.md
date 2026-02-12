@@ -69,22 +69,20 @@ This project is configured for deployment on Cloudflare Pages. Set the `RESEND_A
 
 ```
 ├── app/
-│   ├── api/
-│   │   └── contact/
-│   │       └── route.ts      # Contact form API endpoint
 │   ├── globals.css           # Global styles
 │   ├── layout.tsx            # Root layout
 │   └── page.tsx              # Home page
 ├── components/
 │   ├── About.tsx             # About section
 │   ├── Contact.tsx           # Contact form
-│   ├── Education.tsx         # Education section
+│   ├── Education.tsx         # Education section (includes ChatCare graduation project)
 │   ├── Footer.tsx            # Footer component
-│   ├── Hero.tsx              # Hero section
+│   ├── Hero.tsx              # Hero section with profile image
 │   ├── Navigation.tsx        # Navigation bar
+│   ├── Projects.tsx          # Professional projects (IGT, CybaSquad, AlaBali, CyberTwins)
 │   ├── Skills.tsx            # Skills section
 │   └── Volunteering.tsx      # Volunteering section
-└── public/                   # Static assets
+└── public/                   # Static assets (e.g. profile.jpeg)
 ```
 
 ## License
